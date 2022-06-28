@@ -1,0 +1,140 @@
+.blanket {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+
+  animation: blanket 1.5s ease-in forwards;
+  z-index: 1;
+}
+
+.start {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(270deg, #211c27, #021c31);
+  background-size: 400% 400%;
+
+  -webkit-animation: BackgroundGetStarted 30s ease infinite;
+  -moz-animation: BackgroundGetStarted 30s ease infinite;
+  animation: BackgroundGetStarted 30s ease infinite;
+
+  display: grid;
+  place-items: center;
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "label label label"
+      "input input button";
+  }
+  label {
+    grid-area: label;
+    text-align: center;
+
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+    outline: none;
+  }
+
+  input {
+    grid-area: input;
+    height: 40px;
+    width: 200px;
+
+    margin-right: 10px;
+
+    padding: 20px 20px;
+    font-size: 18px;
+    color: #021c31;
+    border: none;
+
+    border-radius: 100vmax;
+
+    outline: none;
+
+    cursor: pointer;
+  }
+
+  button {
+    grid-area: button;
+    background: none;
+    border: none;
+    outline: none;
+
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+
+    svg {
+      fill: rgb(17, 135, 76);
+      width: 40px;
+      height: 40px;
+
+      transition: fill 0.2s linear;
+    }
+
+    svg:hover {
+      fill: rgb(29, 209, 119);
+    }
+  }
+}
+
+@-webkit-keyframes BackgroundGetStarted {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+@-moz-keyframes BackgroundGetStarted {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+@keyframes BackgroundGetStarted {
+  0% {
+    background-position: 49% 0%;
+  }
+  50% {
+    background-position: 52% 100%;
+  }
+  100% {
+    background-position: 49% 0%;
+  }
+}
+
+@keyframes blanket {
+  0% {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+
+  99% {
+    z-index: 1;
+  }
+
+  100% {
+    background-color: rgba($color: #000000, $alpha: 0);
+    z-index: 0;
+  }
+}

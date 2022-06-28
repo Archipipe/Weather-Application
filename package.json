@@ -8,8 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-query": "^1.2.9",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.4.0",
+    "react-query": "^3.39.1",
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
